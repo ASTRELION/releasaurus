@@ -1,3 +1,451 @@
+# [0.1.0-rc.1](https://codeberg.org/astrelion/test-repo/releases/v0.1.0-rc.1) - 2026-06-19
+
+### 🚀 Features
+
+- add configurable config path [_(c8f6e11)_]() (astrelion)
+
+- support token env vars prefixed with RELEASAURUS_ [_(05ebf75)_]() (Rob Gonnella)
+
+- _(azure)_ support OAuth bearer tokens alongside PATs [_(4753a37)_]() (Michal Dvořák)
+
+- _(cli)_ support env vars for forge, repo, and local-path flags [_(d3207f7)_]() (Michal Dvořák)
+
+- _(cli)_ auto-infer forge from repo URL for cloud hosts [_(246652a)_]() (Michal Dvořák)
+
+- _(azure)_ adds experimental support for azure devops [_(1a27e65)_]() (Michal Dvořák)
+
+- adds explicit support for forgejo [_(12438cd)_]() (Rob Gonnella)
+
+- adds config option for tag search depth [_(2fd6156)_]() (Rob Gonnella)
+
+- _(gitea)_ force push release branch [_(18cb2a2)_]() (Rob Gonnella)
+
+- PR body edits are reflected in release notes [_(3097131)_]() (Rob Gonnella)
+
+- add missing commit type skips and use a lookup table instead of multiple if structures [_(b59c68d)_]() (Jasper Vaneessen)
+
+- adds the ability to aggregate changelogs for prereleases [_(29d4829)_]() (Rob Gonnella)
+
+- adds support for gitlab scoped labels [_(4f334f8)_]() (Rob Gonnella)
+
+- creates separate releasaurus-core crate [_(aeb117c)_]() (Rob Gonnella)
+
+- support local git variant for all forges [_(05b1b20)_]() (Rob Gonnella)
+
+- adds support for libs.versions.toml in java updater [_(97ce9bd)_]() (Rob Gonnella)
+
+- allows targeting specific packages in cli commands [_(8137b24)_]() (Rob Gonnella)
+
+- adds golang updater [_(bb5d736)_]() (Rob Gonnella)
+
+- adds support for comparison links [_(c5556da)_]() (Rob Gonnella)
+
+- Adds support for php composer.lock file updates [_(ff05afa)_]() (Rob Gonnella)
+
+- allow overriding tag prefix from command line [_(77ecefc)_]() (Rob Gonnella)
+
+- adds command aliases [_(ab958f7)_]() (Rob Gonnella)
+
+- implements show notes feature [_(eed040c)_]() (Rob Gonnella)
+
+- implements sub-package feature [_(eb3c8aa)_]() (Rob Gonnella)
+
+- adds "show current-release" command [_(596cdbe)_]() (Rob Gonnella)
+
+- simplifies CI actions and components [_(b5efea2)_]() (Rob Gonnella)
+
+- support custom regex for additional manifests [_(06cd89d)_]() (Rob Gonnella)
+
+- adds skip_shas and reword features [_(e945142)_]() (Rob Gonnella)
+
+- implements prerelease cli overrides [_(7864e23)_]() (Rob Gonnella)
+
+- implements start-next feature [_(b451611)_]() (Rob Gonnella)
+
+- implements "show release" command [_(ecb945a)_]() (Rob Gonnella)
+
+- implements base_branch feature [_(8876a9c)_]() (Rob Gonnella)
+
+- improve cli organization and remote parsing (#169) [_(c89e0bd)_]() (Rob Gonnella)
+
+- adds static prerelease suffix option for java snapshots [_(3df58e6)_]() (Darren Vine)
+
+- implements show command [_(fde6b84)_]() (Rob Gonnella)
+
+- adds out-file option to projected release cmd [_(f5ad5af)_]() (Rob Gonnella)
+
+- adds projected-release command [_(49241bf)_]() (Rob Gonnella)
+
+- add ability to specify job stage in gitlab components [_(f7d18f1)_]() (Rob Gonnella)
+
+- implements generic manifest version updates [_(49f6472)_]() (Rob Gonnella)
+
+- adds script to automate schema generation [_(be63344)_]() (Rob Gonnella)
+
+- exposes VersionUpdater options in user facing config [_(f3598cc)_]() (Rob Gonnella)
+
+- adds local repo forge for testing config changes [_(576fd54)_]() (Rob Gonnella)
+
+- implements dry-run option for commands [_(05c5d5b)_]() (Rob Gonnella)
+
+- adds github and gitea actions and gitlab-ci components [_(476f40a)_]() (Rob Gonnella)
+
+- adds new options to changelog config [_(bcd2c7b)_]() (Rob Gonnella)
+
+- implements additional_paths [_(11ed7ef)_]() (Rob Gonnella)
+
+- adds support for workspace_root config option (#96) [_(f44ede1)_]() (Rob Gonnella)
+
+- adds prerelease feature (#93) [_(52c8c48)_]() (Rob Gonnella)
+
+### 🐛 Bug Fixes
+
+- fixes issue in gitea is_ancestor_of_branch check [_(812c281)_]() (Rob Gonnella)
+
+- fixes issue with using --local-path [_(8a19d2d)_]() (Rob Gonnella)
+
+- only filter Gitea release PRs by labels that exist [_(fabd951)_]() (Stephan Peijnik-Steinwender)
+
+- fixes extra tailing new line at end of changelog [_(23bdbbc)_]() (Rob Gonnella)
+
+- remove trailing blank line from generated CHANGELOG [_(de31897)_]() (Nicholas Blair)
+
+- fixes issue with sha_compare_links and release timestamps [_(06bae82)_]() (Rob Gonnella)
+
+- fixes issue with publish github action [_(d218bba)_]() (Rob Gonnella)
+
+- fixes github/gitea/forgejo action [_(bb999e3)_]() (Rob Gonnella)
+
+- another docker-publishing job fix [_(58fa3c3)_]() (Rob Gonnella)
+
+- fixes issue with publishing docker images [_(b05565e)_]() (Rob Gonnella)
+
+- fixes github/gitea/forgejo action [_(d866932)_]() (Rob Gonnella)
+
+- fixes issue with missing user-agent header [_(bc8d495)_]() (Rob Gonnella)
+
+- _(gitea)_ fixes issue with getting existing file shas [_(0bc85f0)_]() (Rob Gonnella)
+
+- _(azure)_ never treat URL username as a token [_(729e8d9)_]() (Michal Dvořák)
+
+- _(azure)_ surface actionable error on non-JSON responses [_(e1f1258)_]() (Michal Dvořák)
+
+- _(azure)_ surface API errors and document release branch permission [_(c846151)_]() (Michal Dvořák)
+
+- _(forgejo)_ fixes issue with deleting release branch in forgejo [_(99ceb60)_]() (Rob Gonnella)
+
+- fixes issue with creating release branch in forgejo [_(ebb6dc8)_]() (Rob Gonnella)
+
+- removes option to skip release commits [_(09a3006)_]() (Rob Gonnella)
+
+- fixes forgejo implementations [_(5d81b3a)_]() (Rob Gonnella)
+
+- _(gitea)_ updates gitea types to match latest api [_(a6a2b5e)_]() (Rob Gonnella)
+
+- addresses issues with getting labels in github and gitea [_(c7d3acc)_]() (Rob Gonnella)
+
+- _(gitlab)_ paginate labels [_(c12c92e)_]() (nblair2)
+
+- _(gitlab)_ tag to squash commit [_(36ab4e3)_]() (nblair2)
+
+- minor update to prerelease docs [_(4ab12a3)_]() (Rob Gonnella)
+
+- applies search depth features to local repo [_(d89d1e3)_]() (Rob Gonnella)
+
+- adds missing readme for releasaurus-core crate [_(b8be218)_]() (Rob Gonnella)
+
+- fixes issues resulting from refactor to RepoUrl [_(57d3523)_]() (Rob Gonnella)
+
+- minor updates to new skip commit types [_(873dbe5)_]() (Rob Gonnella)
+
+- address issues with tag ordering when analyzing [_(1de730f)_]() (Rob Gonnella)
+
+- adds missing READMEs for each crate [_(c24694e)_]() (Rob Gonnella)
+
+- _(github)_ fixes issue with setting commit date [_(2a42ef3)_]() (Rob Gonnella)
+
+- _(github)_ fixes issue with setting commit author [_(dbd1f20)_]() (Rob Gonnella)
+
+- restore HEAD to base branch after creating release branch [_(6e21cab)_]() (Stephan Peijnik-Steinwender)
+
+- _(local forge)_ adds missing get_release_by_tag implementation [_(077e26d)_]() (Rob Gonnella)
+
+- add debug logging to local forge operations for diagnosing path issues [_(042d597)_]() (Stephan Peijnik-Steinwender)
+
+- handle missing files on first release and resolve paths via repo_path [_(d50cc47)_]() (Stephan Peijnik-Steinwender)
+
+- _(local forge)_ adds test for create_release_branch [_(bf2958b)_]() (Rob Gonnella)
+
+- _(local forge)_ fixes issue with creating branches [_(c409573)_]() (Rob Gonnella)
+
+- create parent directories before writing files in local_commit [_(305d743)_]() (Stephan Peijnik-Steinwender)
+
+- fixes issue in gitlab forge [_(b83f1d1)_]() (Rob Gonnella)
+
+- make GiteaIssue pull_request field optional [_(37955e7)_]() (Stephan Peijnik-Steinwender)
+
+- ensures tag is ancestor of target branch [_(f94b83f)_]() (Rob Gonnella)
+
+- loosen regex for matching release commits [_(499b72c)_]() (Rob Gonnella)
+
+- fixes issue in gitlab forge for first release [_(cca35e1)_]() (Rob Gonnella)
+
+- minor updates to config documentation [_(c24fdbc)_]() (Rob Gonnella)
+
+- fixes issue in java updater [_(b66e4f5)_]() (Rob Gonnella)
+
+- fixes missing pending release guard in release-pr cmd [_(37c3b2b)_]() (Rob Gonnella)
+
+- removes duplicate processing of additional manifest files [_(1866730)_]() (Rob Gonnella)
+
+- fixes bug in additional-manifest-files feature [_(f0bcc45)_]() (Rob Gonnella)
+
+- fixes gitlab release link base urls [_(eca9aad)_]() (Rob Gonnella)
+
+- fixes issue in tag searches [_(df2f10f)_]() (Rob Gonnella)
+
+- unify errors for getting open and merged release PRs [_(2520b6a)_]() (Rob Gonnella)
+
+- addresses pagination issues in forges [_(b2eb837)_]() (Rob Gonnella)
+
+- another fix for restricting show next-release to target package [_(80375b8)_]() (Rob Gonnella)
+
+- prevent fetching commits for all when target supplied [_(93986ec)_]() (Rob Gonnella)
+
+- fixes issues with ci actions [_(b441fbb)_]() (Rob Gonnella)
+
+- fixes default group sorting in generated changelog [_(68f8ec7)_]() (Rob Gonnella)
+
+- fixes bug in start-next command [_(b4a38d7)_]() (Rob Gonnella)
+
+- ensures correct base_branch is used in forge.create_release_branch [_(8974d3f)_]() (Rob Gonnella)
+
+- fixes issues in base_branch implementation [_(dd950c0)_]() (Rob Gonnella)
+
+- addresses issue in gitlab forge `get_merged_release_pr` [_(baa75bd)_]() (Rob Gonnella)
+
+- _(github)_ skip closed unmerged PRs with pending label [_(64c28c1)_]() (Rob Gonnella)
+
+- fixes issue with using GITEA_TOKEN env var [_(455aef7)_]() (Rob Gonnella)
+
+- fixes issue with getting merged release PRs in github [_(6b24688)_]() (Rob Gonnella)
+
+- updates documentation for projected-release command [_(5c6c272)_]() (Rob Gonnella)
+
+- bump action versions [_(8f38d8f)_]() (Rob Gonnella)
+
+- expose job_name input in gitlab parent workflow [_(d5f783a)_]() (Rob Gonnella)
+
+- removes unnecessary log lines in gitea forge [_(0a3423d)_]() (Rob Gonnella)
+
+- fixes issue in github forge with finding open release PRs [_(f0bf56c)_]() (Rob Gonnella)
+
+- prevent logging manifest file content [_(09c69e8)_]() (Rob Gonnella)
+
+- bump forge client versions [_(98e8efe)_]() (Rob Gonnella)
+
+- fixes issue with additional_manifest_files feature [_(0e3ae29)_]() (Rob Gonnella)
+
+- updates documentation to include binary install instructions [_(130bbd2)_]() (Rob Gonnella)
+
+- fixes cargo binstall metadata [_(a42ad96)_]() (Rob Gonnella)
+
+- exclude dev-scripts when building and publishing [_(2030c11)_]() (Rob Gonnella)
+
+- fixes issue with uploading artifacts to release [_(a4af60d)_]() (Rob Gonnella)
+
+- another fix for publishing binaries [_(ca6ea74)_]() (Rob Gonnella)
+
+- uses cross-platform action for creating tar archives [_(8d60e22)_]() (Rob Gonnella)
+
+- fixes use of matrix var in packaging job [_(eff6c19)_]() (Rob Gonnella)
+
+- fixes issue with publishing binaries [_(1d14e5d)_]() (Rob Gonnella)
+
+- improves publishing binaries to release [_(e2b5eb7)_]() (Rob Gonnella)
+
+- fixes issue with building windows binary [_(ec9f6d2)_]() (Rob Gonnella)
+
+- fixes docker build and bumps actions versions [_(34977ea)_]() (Rob Gonnella)
+
+- another fix for caching in pipeline [_(a106382)_]() (Rob Gonnella)
+
+- fixes asset names in releases [_(3e2dd32)_]() (Rob Gonnella)
+
+- include statically linked openssl for cross compiling [_(76cfa02)_]() (Rob Gonnella)
+
+- temporarily disable building windows binary [_(98fedff)_]() (Rob Gonnella)
+
+- fixes matrix usage in pipeline binaries job [_(e06de41)_]() (Rob Gonnella)
+
+- another fix for building binaries in pipeline [_(5300607)_]() (Rob Gonnella)
+
+- fixes issue with building and publishing binaries [_(376a1ca)_]() (Rob Gonnella)
+
+- improves the gitea get_commits implementation [_(7ef1238)_]() (Rob Gonnella)
+
+- fixes issues with backfilling file list in gitlab forge [_(1ad6679)_]() (Rob Gonnella)
+
+- fixes issue with getting commits in github forge [_(39d6fbf)_]() (Rob Gonnella)
+
+- another fix for github and gitea actions [_(be2bb83)_]() (Rob Gonnella)
+
+- fixes gitea actions and prunes options [_(e5d1cf9)_]() (Rob Gonnella)
+
+- final attempt to fix action gates [_(12a0560)_]() (Rob Gonnella)
+
+- another attempt at fixing action gates [_(fb8be23)_]() (Rob Gonnella)
+
+- fixes issue in github / gitea actions [_(ebc4be2)_]() (Rob Gonnella)
+
+- fixes issue with adding and reading metada to release PRs [_(48b6b42)_]() (Rob Gonnella)
+
+- fixes issues in release command [_(f0d527c)_]() (Rob Gonnella)
+
+- fixes debug inputs for github and gitea actions [_(7d100ca)_]() (Rob Gonnella)
+
+- fixes issue with parsing PR metadata [_(b29ad7c)_]() (Rob Gonnella)
+
+- fixes issues with github and gitea actions [_(b2c774e)_]() (Rob Gonnella)
+
+- updates actions to latest versions [_(232aca1)_]() (Rob Gonnella)
+
+- fixes issues [_(0fffb0d)_]() (Rob Gonnella)
+
+- fixes issue in local forge [_(f54b0a3)_]() (Rob Gonnella)
+
+- updates schema to add newly added properties [_(ca39fc5)_]() (Rob Gonnella)
+
+- preserve formatting in json files [_(f756315)_]() (Rob Gonnella)
+
+- fixes issues with package path processing [_(4077adf)_]() (Rob Gonnella)
+
+- preserve indentation in python updaters [_(7536361)_]() (Rob Gonnella)
+
+- preserves formatting in ruby and java updaters [_(679d788)_]() (Rob Gonnella)
+
+- errors if release-pr is run before previous release has been tagged (#94) [_(9533e13)_]() (Rob Gonnella)
+
+- fixes issue in release command [_(d49b893)_]() (Rob Gonnella)
+
+### ◀️ Revert
+
+- reverts de31897 to fix changelog formatting [_(d4b09f0)_]() (Rob Gonnella)
+
+### 🚜 Refactor
+
+- improves separation of concerns across modules [_(1c02081)_]() (Rob Gonnella)
+
+- reduces calls to fetch tags for packages [_(a2be2c6)_]() (Rob Gonnella)
+
+- improves performance of commit group parsing [_(0e8824d)_]() (Rob Gonnella)
+
+- uses Url type in appropriate areas [_(e8ea991)_]() (Rob Gonnella)
+
+- refactors forge instantiation [_(8b4fe52)_]() (Rob Gonnella)
+
+- parses straight to GitUrl from cli [_(d3d377e)_]() (Rob Gonnella)
+
+- major refactor of repository structure [_(df3b73c)_]() (Rob Gonnella)
+
+- introduces FileLoader trait [_(434af51)_]() (Rob Gonnella)
+
+- removes duplication of logs across forges [_(7a45e6e)_]() (Rob Gonnella)
+
+- implements factory pattern for creating forges [_(9d488cd)_]() (Rob Gonnella)
+
+- uses strategies architecture for next version [_(0be5f51)_]() (Rob Gonnella)
+
+- removes unnecessary derives of Clone trait [_(8adcda7)_]() (Rob Gonnella)
+
+- improves error handling with dedicated types [_(5005e0e)_]() (Rob Gonnella)
+
+- reduces code duplication in updaters [_(976b2b2)_]() (Rob Gonnella)
+
+- improves handling of tag timestamp parsing [_(1322f8f)_]() (Rob Gonnella)
+
+- refactors release command [_(d1366ce)_]() (Rob Gonnella)
+
+- set default_branch once at initialization of forge [_(95b4ff4)_]() (Rob Gonnella)
+
+- major refactor to updater processing logic [_(ad6af80)_]() (Rob Gonnella)
+
+- minor refactor to more idomatic rust conventions [_(0d3efb3)_]() (Rob Gonnella)
+
+- removes uses of unwrap and expect in live code [_(61552a2)_]() (Rob Gonnella)
+
+- refactors ruby and php updaters [_(23336b7)_]() (Rob Gonnella)
+
+- refactors java updater [_(a60c009)_]() (Rob Gonnella)
+
+### ⚡ Performance
+
+- improves string handling in forges [_(3f83aff)_]() (Rob Gonnella)
+
+- improves handling of updaters [_(bf531ef)_]() (Rob Gonnella)
+
+- improves handling of RemoteConfig in forges [_(96b5b34)_]() (Rob Gonnella)
+
+- improves performance by reducing cloning [_(b7fc8b9)_]() (Rob Gonnella)
+
+### 📚 Documentation
+
+- updates documentation for gitea/forgejo action issue [_(e2d36af)_]() (Rob Gonnella)
+
+- improves visibility for required token scopes [_(787fac2)_]() (Rob Gonnella)
+
+- streamlines documentation [_(4b39ca5)_]() (Rob Gonnella)
+
+- updates azure docs for command order [_(437a0d5)_]() (Rob Gonnella)
+
+- run gitlab release then release-pr in one sequential job [_(88c2cc6)_]() (nblair2)
+
+- improves contributing docs [_(6176318)_]() (Rob Gonnella)
+
+- updates README for viewing tip of main docs [_(990a30b)_]() (Rob Gonnella)
+
+- documents gitea known limitation and workaround [_(3e9779f)_]() (Rob Gonnella)
+
+- updates documentation on usage of hybrid mode in CI [_(cbf798a)_]() (Rob Gonnella)
+
+- fix gitlab ci/cd example [_(b948203)_]() (nblair2)
+
+- minor updates to CI/CD docs for Gitlab [_(eb74b5a)_]() (Rob Gonnella)
+
+- improves documentation [_(082a564)_]() (Rob Gonnella)
+
+- updates documentation [_(b69d155)_]() (Rob Gonnella)
+
+- updates contributing doc [_(828fb2c)_]() (Rob Gonnella)
+
+- updates documentation for additional_paths feature [_(1a59909)_]() (Rob Gonnella)
+
+### 🧪 Testing
+
+- add missing unit tests [_(ab9edaa)_]() (Jasper Vaneessen)
+
+- adds integration tests for forges [_(5bc9812)_]() (Rob Gonnella)
+
+- adds back ruby updater unit tests [_(26637de)_]() (Rob Gonnella)
+
+- adds back rust updater unit tests [_(f2e2b23)_]() (Rob Gonnella)
+
+- adds basic smoke tests for each of the updater entrypoints [_(85095ac)_]() (Rob Gonnella)
+
+- adds back unit tests for release_pr.rs [_(a5914bd)_]() (Rob Gonnella)
+
+- adds back node updater unit tests [_(40d82c7)_]() (Rob Gonnella)
+
+- adds unit tests for framework.rs [_(4dae2f9)_]() (Rob Gonnella)
+
+- adds back python updater unit tests [_(efd2d45)_]() (Rob Gonnella)
+
+- adds back php updater unit tests [_(e64557c)_]() (Rob Gonnella)
+
+- adds back java updater unit tests [_(147ae21)_]() (Rob Gonnella)
+
+- adds additional unit tests to release.rs command [_(4f98ad2)_]() (Rob Gonnella)
+
 # [0.21.0-rc.1](https://github.com/robgonnella/releasaurus/compare/v0.20.5...v0.21.0-rc.1) - 2026-06-18
 
 ### 🚀 Features
