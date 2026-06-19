@@ -778,6 +778,12 @@ mod tests {
             .current_dir(path)
             .output()
             .unwrap();
+        // Disable GPG signing so the commit succeeds in any environment
+        Command::new("git")
+            .args(["config", "commit.gpgsign", "false"])
+            .current_dir(path)
+            .output()
+            .unwrap();
         std::fs::write(path.join("README"), "init").unwrap();
         Command::new("git")
             .args(["add", "."])
